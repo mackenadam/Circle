@@ -2,12 +2,15 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import { getCard } from '../actions/currentCard'
+import { saveCardToDiscardState } from '../actions/discard'
 
 function Game (props) {
     const currentCard = props.currentCard.cards[0]
 
     function drawCard () {
-        props.dispatch(getCard(props.deck.deck_id))
+        props.dispatch(saveCardToDiscardState(currentCard))
+        .then(props.dispatch(getCard(props.deck.deck_id)))
+        // props.dispatch(getCard(props.deck.deck_id))
       }
 
     return (
@@ -35,6 +38,7 @@ function mapStateToProps (globalState) {
     return {
         currentCard: globalState.currentCard,
         deck: globalState.deck,
+        discard: globalState.discard,
         rules: globalState.rules
     }
 }
