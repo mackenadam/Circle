@@ -18,8 +18,7 @@ class App extends React.Component {
     return (
       <div className='app'>
         <h1 className='title'>Circle of Death</h1>
-        { this.props.currentCard.cards && <Game /> }
-        { !this.props.currentCard.cards && <NewGame /> }
+        { this.props.currentCard.cards ? <Game /> : <NewGame /> }
       </div>
     )
   }
