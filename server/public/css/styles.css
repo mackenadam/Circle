@@ -7,17 +7,33 @@
 }
 
 body, html {
-    background-color: #373a40;
-    color: #ffdd93;
+    /* background-color: #232529; */
+    background: rgb(59,62,69);
+    background: radial-gradient(circle, rgba(59,62,69,1) 0%, rgba(35,37,41,1) 50%, rgba(0,0,0,1) 100%);
+    color: #ffcf66;
     font-family: 'Special Elite', cursive;
     height: 100vh;
-    line-height: 150%;
     margin: 0;
     width: 100vw;
 }
 
+h1, h2, h3, h4, p {
+    background: -webkit-linear-gradient(#ffc64d, #664600);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+p {
+    background: -webkit-linear-gradient(#ffc64d, #805700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .title {
     font-size: 4rem;
+    letter-spacing: 0.3rem;
+    margin: 16px 0;
+    padding: 16px;
     width: 100%;
 }
 
@@ -28,6 +44,8 @@ body, html {
 
 .cardName {
     font-size: 3rem;
+    margin: 16px 0;
+    letter-spacing: 0.2rem;
 }
 
 .cardImg {
@@ -42,24 +60,28 @@ body, html {
 
 .cardRules h4 {
     font-size: 2rem;
-    margin-bottom: 16px;
+    letter-spacing: 0.2rem;
+    margin: 16px 0;
 }
 
 .cardRules p {
     font-size: 1.25rem;
+    letter-spacing: 0.1rem;
     padding: 16px;
 }
 
 .nextCard {
-    background-color: #ffdd93;
-    border: 1px solid #ffae00;
+    background: rgb(102,70,0);
+    background: linear-gradient(0deg, rgba(102,70,0,1) 0%, rgba(255,198,77,1) 100%);
+    border: 1px solid #664600;
     border-radius: 5px;
-    color: #373a40;
+    color: #232529;
     font-size: 1.5rem;
     padding: 16px 32px;
 }
 
 .nextCard:hover {
-    background-color: #ffae00;
+    background: rgb(102,70,0);
+    background: linear-gradient(0deg, rgba(255,198,77,1) 0%, rgba(102,70,0,1) 100%);
     color: #17191c;
 }
